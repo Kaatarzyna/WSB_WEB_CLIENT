@@ -7,9 +7,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class FactStatus {
+public class Nutritions {
 
-    Boolean verified;
-    Integer sentCount;
+    Double carbohydrates;
+    Double protein;
+    Double fat;
+    Double calories;
+    Double sugar;
 
 }

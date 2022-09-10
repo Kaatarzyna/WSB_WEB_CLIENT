@@ -4,8 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/")
 public class WebClientController {
@@ -16,23 +14,14 @@ public class WebClientController {
         this.webClientService = webClientService;
     }
 
-    @GetMapping("/")
-    Object findCatFact() {
-        return webClientService.findRandomCatFact();
+    @GetMapping("/1")
+    Object findBananaInfo() {
+        return webClientService.findBananaInfo();
     }
 
-    @GetMapping("/catFact")
-    CatFact findCatFact2() {
-        return webClientService.findRandomCatFact2();
+    @GetMapping("/2")
+    Fruit findBananaInfo2() {
+        return webClientService.findBananaInfo2();
     }
 
-    @GetMapping("/movies")
-    Object[] movies() {
-        return webClientService.getMovies();
-    }
-
-    @GetMapping("/movies/create")
-    Object createMovie() {
-        return webClientService.createMovie();
-    }
 }
